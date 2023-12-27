@@ -1,0 +1,19 @@
+#### This dataset contains valuable facets of information that bring to light various insights about the video game industry over the years. The dataset includes critical aspects such as the Name of each individual video game which was accounted for in this data aggregation process. 
+
+### Data Analysis ###
+
+Sales Performance: I examine the sales figures categorized regionally or globally, leading to understanding which games have been most profitable and in which regions.
+
+''' sql
+SELECT Name, NA_Sales FROM video_games GROUP BY Name, NA_Sales ORDER BY NA_Sales DESC;
+SELECT Name, EU_Sales FROM video_games GROUP BY Name, EU_Sales ORDER BY EU_Sales DESC;
+SELECT Name, JP_Sales FROM video_games GROUP BY Name, JP_Sales ORDER BY JP_Sales DESC;
+SELECT Name, Other_Sales FROM video_games GROUP BY Name, Other_Sales ORDER BY Other_Sales DESC;
+SELECT Global_Sales, Name FROM video_games GROUP BY Name, Global_Sales ORDER BY Global_Sales DESC;
+'''
+Genre or platform preference: With data about the genre and platform for each game you can understand what types of games are more popular on specific platforms or which genres seem to be fan favourites.
+
+'''sql
+SELECT Platform, Genre FROM video_games GROUP BY Platform, Genre ORDER BY Platform ASC;
+'''
+
